@@ -15,3 +15,17 @@ nx affected:apps =  The affected:apps looks at what you have changed and uses th
 nx affected:libs, and you should see auth printed out. This command works similarly, but instead of printing the affected apps, it prints the affected libs.
 
 nx affected:test to retest only the projects affected by the change.
+
+
+## Docker Command
+
+docker compose up -d
+
+### Prisma
+
+prisma format => format schema.prisma
+
+## Generation Command
+
+nx generate @nrwl/js:library --name=feature-user --directory=api --compiler=swc --buildable --tags "scope:api"
+nx g  @nrwl/nest:resource --project=api-feature-user --directory=lib --type="graphql-code-first" --crud --name user

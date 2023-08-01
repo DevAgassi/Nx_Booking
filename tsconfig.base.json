@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@booking/api/data-access-db": ["libs/api/data-access-db/src/index.ts"],
+      "@booking/api/feature-user": ["libs/api/feature-user/src/index.ts"],
+      "@booking/api/generated-db-types": [
+        "libs/api/generated-db-types/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
