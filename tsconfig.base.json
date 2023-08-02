@@ -19,7 +19,11 @@
       "@booking/api/feature-user": ["libs/api/feature-user/src/index.ts"],
       "@booking/api/generated-db-types": [
         "libs/api/generated-db-types/src/index.ts"
-      ]
+      ],
+      "@booking/web/data-access-graphql": [
+        "libs/web/data-access-graphql/src/index.ts"
+      ],
+      "@booking/web/utils-env": ["libs/web/utils-env/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
