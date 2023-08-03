@@ -1,5 +1,8 @@
 ## Tutrial Project Installation
 https://dev.to/beeman/introduction-to-building-api-s-with-nestjs-and-nrwl-nx-1l2b
+
+https://www.youtube.com/watch?v=3cYOFQzvK7Q
+
 https://blog.nrwl.io/nx-now-supports-next-js-84ae3d0b2aed
 
 
@@ -21,11 +24,18 @@ nx affected:test to retest only the projects affected by the change.
 
 docker compose up -d
 
-### Prisma
+
+## Prisma
 
 prisma format => format schema.prisma
 
 ## Generation Command
 
 nx generate @nrwl/js:library --name=feature-user --directory=api --compiler=swc --buildable --tags "scope:api"
+
 nx g  @nrwl/nest:resource --project=api-feature-user --directory=lib --type="graphql-code-first" --crud --name user
+
+Add generated hooks :  nx generate @nrwl/js:library --name=data-access-graphql --directory=web --compiler=swc --buildable --tags "scope:web"
+
+Install GQL generator : npm i -D graphql-codegen @graphql-codegen/cli @graphql-codegen/near-operation-file-preset @graphql-codegen/typed-document-node @graphql-codegen/typescript-operations @graphql-codegen/typescript @graphql-codegen/typescript-graphql-request
+
