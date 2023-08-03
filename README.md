@@ -24,6 +24,7 @@ nx affected:test to retest only the projects affected by the change.
 
 docker compose up -d
 
+
 ## Prisma
 
 prisma format => format schema.prisma
@@ -37,3 +38,4 @@ nx g  @nrwl/nest:resource --project=api-feature-user --directory=lib --type="gra
 Add generated hooks :  nx generate @nrwl/js:library --name=data-access-graphql --directory=web --compiler=swc --buildable --tags "scope:web"
 
 Install GQL generator : npm i -D graphql-codegen @graphql-codegen/cli @graphql-codegen/near-operation-file-preset @graphql-codegen/typed-document-node @graphql-codegen/typescript-operations @graphql-codegen/typescript @graphql-codegen/typescript-graphql-request
+
