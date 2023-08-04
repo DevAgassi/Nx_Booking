@@ -1,4 +1,4 @@
-import { gql } from '../data-access/graphq-client';
+import { gql } from '../../data-access/graphq-client';
 import styles from './page.module.css';
 
 
