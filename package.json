@@ -7,12 +7,19 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
+
     "dockers:dev": "docker-compose -f tools\\booking-environment\\dev.docker-compose.yml up -d --no-recreate --remove-orphans",
+    
     "db:migrate:dev": "npx env-cmd -f .env npx prisma migrate dev",
     "db:generate:dev": "npx env-cmd -f .env npx prisma generate dev",
     "db:studio": "npx env-cmd -f .env npx prisma studio",
+
     "gen:gql-client": "graphql-code-generator --config ./tools/graphql-codegen/codegen.yml --watch",
-    "verify": "nx workspace-lint && nx format:write && nx format:check && nx affected --target=lint --fix --parallel=3 && npx nx affected --target=test --parallel=3 && nx affected --target=build --parallel=3 --exclude=web"
+
+    "verify": "nx workspace-lint && nx format:write && nx format:check && nx affected --target=lint --fix --parallel=3 && npx nx affected --target=test --parallel=3 && nx affected --target=build --parallel=3 --exclude=web",
+
+    "validate:web-env": "npx nx run web-utils-env:validate",
+    "validate:api-env": "npx nx run api-utils-env:validate"
   },
   "prisma": {
     "schema": "libs/api/data-access-db/src/lib/schema.prisma"
